@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Schat</string>
+    <string name="open_connect_tab_title">Open Connects</string>
+    <string name="my_connect_tab_title">My Connects</string>
+    <string name="profile_tab_title">Profile</string>
+    <string name="dummy_nickneme">Johny Kenn</string>
+    <string name="dummy_status_string">Dummy status Hi...!</string>
+    <string name="dummy_last_login">03/04/2019</string>
+    <string name="Username_expln">Please enter a user name in the following box\nUser Name
+        is only used to authenticate the user.Then use a Nickname as your
+        profile name\nThe Nickname will be shown to others
+        in order to identify you..
+    </string>
+    <string name="Optional_expln">The following are optional details
+        required for the sign-up\nThis details will be used to find
+        a better match for you if available</string>
+</resources>

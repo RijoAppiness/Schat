@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="viewpager_top_margin">120dp</dimen>
+    <dimen name="tabHeadWidth">100dp</dimen>
+    <dimen name="tabHeadHeight">75dp</dimen>
+    <dimen name="tabHeadSideMargin">20dp</dimen>
+    <dimen name="centre_tabHeadSideMargin">10dp</dimen>
+    <dimen name="tabIconWidth">35dp</dimen>
+    <dimen name="tabIconHeight">35dp</dimen>
+    <dimen name="tab_head_text_size">13sp</dimen>
+    <dimen name="profile_photo_width">65dp</dimen>
+    <dimen name="profile_photo_height">65dp</dimen>
+    <dimen name="cardPadding">10dp</dimen>
+
+</resources>

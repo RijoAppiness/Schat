@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".root_activity.ContainerActivity">
+
+    <FrameLayout
+        android:id="@+id/bgBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeadHeight"
+        app:layout_anchor="@id/bgBar"
+        app:layout_anchorGravity="bottom"
+
+
+        >
+
+        <androidx.cardview.widget.CardView
+            style="@style/TabHeaderCardStyle"
+            android:layout_width="@dimen/tabHeadWidth"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/tabHeadSideMargin"
+            android:id="@+id/open_connect_tab_head"
+            app:layout_constraintStart_toStartOf="parent"
+
+            >
+            <ImageView
+                android:layout_width="@dimen/tabIconWidth"
+                android:layout_height="@dimen/tabIconHeight"
+                android:id="@+id/open_connect_im_view"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/open_connect_tab_head_ic_enabled_1"
+                ></ImageView>
+            <TextView
+                style="@style/TabHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_connect_tab_title"
+                android:id="@+id/openconnect_txtview"
+
+                ></TextView>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/TabHeaderCardStyle"
+            android:layout_width="@dimen/tabHeadWidth"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/centre_tabHeadSideMargin"
+            android:layout_marginEnd="@dimen/centre_tabHeadSideMargin"
+            android:id="@+id/my_connect_tab_head"
+            app:layout_constraintStart_toEndOf="@id/open_connect_tab_head"
+            app:layout_constraintEnd_toStartOf="@id/profile_tab_head"
+
+            >
+            <ImageView
+                android:layout_width="@dimen/tabIconWidth"
+                android:layout_height="@dimen/tabIconHeight"
+                android:id="@+id/my_connect_im_view"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/my_connect_tab_head_ic_enabled_1"
+                ></ImageView>
+            <TextView
+                style="@style/TabHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_connect_tab_title"
+                android:id="@+id/myconnect_txtview"
+
+                ></TextView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            style="@style/TabHeaderCardStyle"
+            android:layout_width="@dimen/tabHeadWidth"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/tabHeadSideMargin"
+            android:layout_marginEnd="@dimen/tabHeadSideMargin"
+            android:id="@+id/profile_tab_head"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <ImageView
+                android:layout_width="@dimen/tabIconWidth"
+                android:layout_height="@dimen/tabIconHeight"
+                android:id="@+id/profile_im_view"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/profile_tab_head_ic_enabled_1"
+                ></ImageView>
+            <TextView
+                style="@style/TabHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_tab_title"
+                android:id="@+id/profile_txtview"
+
+                ></TextView>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/viewpager_top_margin"
+        app:layout_anchor="@id/bgBar"
+        app:layout_anchorGravity="bottom">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
