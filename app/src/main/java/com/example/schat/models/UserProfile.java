@@ -9,6 +9,7 @@ import javax.xml.transform.Templates;
 public class UserProfile {
     private String username,nickname,stat_string;
     private Date lastseen_date;
+    private String profile_pic_URI;
 
     public String getUsername() {
         return username;
@@ -16,6 +17,14 @@ public class UserProfile {
 
     public String getNickname() {
         return nickname;
+    }
+
+    public void setProfile_pic_URI(String profile_pic_URI) {
+        this.profile_pic_URI = profile_pic_URI;
+    }
+
+    public String getProfile_pic_URI() {
+        return profile_pic_URI;
     }
 
     @Override

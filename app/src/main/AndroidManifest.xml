@@ -16,13 +16,16 @@
         <activity
             android:name=".signup_login.SignUp_LoginActivity"
             android:theme="@style/AppTheme.Fullscreen">
+        </activity>
+        <activity android:name=".root_activity.ContainerActivity"
+            android:theme="@style/AppTheme.Fullscreen"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".root_activity.ContainerActivity"></activity>
     </application>
 
 </manifest>

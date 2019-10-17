@@ -1,125 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".root_activity.ContainerActivity">
 
-    <FrameLayout
-        android:id="@+id/bgBar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/colorPrimary">
-
-    </FrameLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/tabHeadHeight"
-        app:layout_anchor="@id/bgBar"
-        app:layout_anchorGravity="bottom"
-
-
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
         >
 
-        <androidx.cardview.widget.CardView
-            style="@style/TabHeaderCardStyle"
-            android:layout_width="@dimen/tabHeadWidth"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/tabHeadSideMargin"
-            android:id="@+id/open_connect_tab_head"
-            app:layout_constraintStart_toStartOf="parent"
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name">
 
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
             >
-            <ImageView
-                android:layout_width="@dimen/tabIconWidth"
-                android:layout_height="@dimen/tabIconHeight"
-                android:id="@+id/open_connect_im_view"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/open_connect_tab_head_ic_enabled_1"
-                ></ImageView>
-            <TextView
-                style="@style/TabHeaderTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/open_connect_tab_title"
-                android:id="@+id/openconnect_txtview"
 
-                ></TextView>
+        </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            style="@style/TabHeaderCardStyle"
-            android:layout_width="@dimen/tabHeadWidth"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/centre_tabHeadSideMargin"
-            android:layout_marginEnd="@dimen/centre_tabHeadSideMargin"
-            android:id="@+id/my_connect_tab_head"
-            app:layout_constraintStart_toEndOf="@id/open_connect_tab_head"
-            app:layout_constraintEnd_toStartOf="@id/profile_tab_head"
 
-            >
-            <ImageView
-                android:layout_width="@dimen/tabIconWidth"
-                android:layout_height="@dimen/tabIconHeight"
-                android:id="@+id/my_connect_im_view"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/my_connect_tab_head_ic_enabled_1"
-                ></ImageView>
-            <TextView
-                style="@style/TabHeaderTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/my_connect_tab_title"
-                android:id="@+id/myconnect_txtview"
 
-                ></TextView>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            style="@style/TabHeaderCardStyle"
-            android:layout_width="@dimen/tabHeadWidth"
-            android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/tabHeadSideMargin"
-            android:layout_marginEnd="@dimen/tabHeadSideMargin"
-            android:id="@+id/profile_tab_head"
-            app:layout_constraintEnd_toEndOf="parent"
 
-            >
-            <ImageView
-                android:layout_width="@dimen/tabIconWidth"
-                android:layout_height="@dimen/tabIconHeight"
-                android:id="@+id/profile_im_view"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/profile_tab_head_ic_enabled_1"
-                ></ImageView>
-            <TextView
-                style="@style/TabHeaderTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_tab_title"
-                android:id="@+id/profile_txtview"
 
-                ></TextView>
 
-        </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/viewpager_top_margin"
-        app:layout_anchor="@id/bgBar"
-        app:layout_anchorGravity="bottom">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     </androidx.viewpager.widget.ViewPager>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tabHeadHeight"
+        app:layout_anchor="@id/toolbar"
+        app:layout_anchorGravity="bottom"
+        android:layout_gravity="bottom"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/open_connect_tab_head"
+            style="@style/TabHeaderCardStyle"
+            android:layout_width="@dimen/tabHeadWidth"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/tabHeadSideMargin"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/open_connect_im_view"
+                android:layout_width="@dimen/tabIconWidth"
+                android:layout_height="@dimen/tabIconHeight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/open_connect_tab_head_ic_enabled_1" />
+
+            <TextView
+                android:id="@+id/openconnect_txtview"
+                style="@style/TabHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_connect_tab_title"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/my_connect_tab_head"
+            style="@style/TabHeaderCardStyle"
+            android:layout_width="@dimen/tabHeadWidth"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/centre_tabHeadSideMargin"
+            android:layout_marginEnd="@dimen/centre_tabHeadSideMargin"
+            app:layout_constraintEnd_toStartOf="@id/profile_tab_head"
+            app:layout_constraintStart_toEndOf="@id/open_connect_tab_head"
+            app:cardElevation="10dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/my_connect_im_view"
+                android:layout_width="@dimen/tabIconWidth"
+                android:layout_height="@dimen/tabIconHeight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/my_connect_tab_head_ic_enabled_1" />
+
+            <TextView
+                android:id="@+id/myconnect_txtview"
+                style="@style/TabHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_connect_tab_title"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_tab_head"
+            style="@style/TabHeaderCardStyle"
+            android:layout_width="@dimen/tabHeadWidth"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/tabHeadSideMargin"
+            android:layout_marginEnd="@dimen/tabHeadSideMargin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/profile_im_view"
+                android:layout_width="@dimen/tabIconWidth"
+                android:layout_height="@dimen/tabIconHeight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/profile_tab_head_ic_enabled_1" />
+
+            <TextView
+                android:id="@+id/profile_txtview"
+                style="@style/TabHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_tab_title"
+
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

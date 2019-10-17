@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".root_activity.my_connects.MyConnect">
+    tools:context=".root_activity.open_connects.OpenConnect"
+    >
 
-    <TextView
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="My Connect"
-        android:textSize="52dp"
-        android:gravity="center"/>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:id="@+id/myconnect_recyclerview"
+        tools:listitem="@layout/my_connect_list_item_design" />
+</androidx.constraintlayout.widget.ConstraintLayout>

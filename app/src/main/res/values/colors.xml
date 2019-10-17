@@ -5,4 +5,5 @@
     <color name="colorAccent">#EECB31</color>
     <color name="colorDisable">#B0BBC4</color>
     <color name="fadeTextColor">#9DA1AC</color>
+    <color name="colorfadeWhite">#F5F5F5</color>
 </resources>

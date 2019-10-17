@@ -14,4 +14,16 @@
     <string name="Optional_expln">The following are optional details
         required for the sign-up\nThis details will be used to find
         a better match for you if available</string>
+    <string name="next">Next</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password_description">Chose an appropriate password by mixing up alphebets and numbers</string>
+    <string name="submit">submit</string>
+    <string name="nickname">Nickname</string>
+    <string name="nickname_dec">This is not your user name or password. This is just your nickname which will be shown to others</string>
+    <string name="about">About</string>
+    <string name="phone">Phone</string>
+    <string name="email">E-mail</string>
+    <string name="location">Location</string>
 </resources>
